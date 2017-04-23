@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6154E021EACA76500F8F410 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154E011EACA76500F8F410 /* FancyView.swift */; };
 		F66089E11EAA68270028C5D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66089E01EAA68270028C5D7 /* AppDelegate.swift */; };
-		F66089E31EAA68270028C5D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66089E21EAA68270028C5D7 /* ViewController.swift */; };
+		F66089E31EAA68270028C5D7 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66089E21EAA68270028C5D7 /* MainVC.swift */; };
 		F66089E61EAA68270028C5D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66089E41EAA68270028C5D7 /* Main.storyboard */; };
 		F66089E81EAA68270028C5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F66089E71EAA68270028C5D7 /* Assets.xcassets */; };
 		F66089EB1EAA68270028C5D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66089E91EAA68270028C5D7 /* LaunchScreen.storyboard */; };
+		F66089F31EAA6BE20028C5D7 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66089F21EAA6BE20028C5D7 /* CategoryCell.swift */; };
+		F66089F51EAA6E120028C5D7 /* TrainingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66089F41EAA6E120028C5D7 /* TrainingVC.swift */; };
+		F66089F81EAA6F4C0028C5D7 /* Nisäkkäät.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F66089F71EAA6F4C0028C5D7 /* Nisäkkäät.jpeg */; };
+		F66089FA1EAA6F510028C5D7 /* Linnut.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F66089F91EAA6F510028C5D7 /* Linnut.jpeg */; };
+		F66089FC1EAA6F550028C5D7 /* Sammalet ja jäkälät.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F66089FB1EAA6F550028C5D7 /* Sammalet ja jäkälät.jpeg */; };
+		F66089FE1EAA6F580028C5D7 /* Kasvit.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F66089FD1EAA6F580028C5D7 /* Kasvit.jpeg */; };
+		F6608A001EAA6F5E0028C5D7 /* Sienet.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F66089FF1EAA6F5E0028C5D7 /* Sienet.jpeg */; };
+		F6608A021EAA7E0D0028C5D7 /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6608A011EAA7E0D0028C5D7 /* PlayVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6154E011EACA76500F8F410 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		F66089DD1EAA68270028C5D7 /* Plants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F66089E01EAA68270028C5D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F66089E21EAA68270028C5D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F66089E21EAA68270028C5D7 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F66089E51EAA68270028C5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F66089E71EAA68270028C5D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F66089EA1EAA68270028C5D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F66089EC1EAA68270028C5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F66089F21EAA6BE20028C5D7 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		F66089F41EAA6E120028C5D7 /* TrainingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingVC.swift; sourceTree = "<group>"; };
+		F66089F71EAA6F4C0028C5D7 /* Nisäkkäät.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nisäkkäät.jpeg"; sourceTree = "<group>"; };
+		F66089F91EAA6F510028C5D7 /* Linnut.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Linnut.jpeg; sourceTree = "<group>"; };
+		F66089FB1EAA6F550028C5D7 /* Sammalet ja jäkälät.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sammalet ja jäkälät.jpeg"; sourceTree = "<group>"; };
+		F66089FD1EAA6F580028C5D7 /* Kasvit.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kasvit.jpeg; sourceTree = "<group>"; };
+		F66089FF1EAA6F5E0028C5D7 /* Sienet.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sienet.jpeg; sourceTree = "<group>"; };
+		F6608A011EAA7E0D0028C5D7 /* PlayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayVC.swift; path = ../PlayVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6154E001EACA73000F8F410 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6154E011EACA76500F8F410 /* FancyView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		F66089D41EAA68270028C5D7 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +80,31 @@
 		F66089DF1EAA68270028C5D7 /* Plants */ = {
 			isa = PBXGroup;
 			children = (
+				F6154E001EACA73000F8F410 /* View */,
+				F66089F61EAA6F430028C5D7 /* Util */,
 				F66089E01EAA68270028C5D7 /* AppDelegate.swift */,
-				F66089E21EAA68270028C5D7 /* ViewController.swift */,
+				F66089E21EAA68270028C5D7 /* MainVC.swift */,
+				F66089F21EAA6BE20028C5D7 /* CategoryCell.swift */,
 				F66089E41EAA68270028C5D7 /* Main.storyboard */,
 				F66089E71EAA68270028C5D7 /* Assets.xcassets */,
 				F66089E91EAA68270028C5D7 /* LaunchScreen.storyboard */,
 				F66089EC1EAA68270028C5D7 /* Info.plist */,
+				F6608A011EAA7E0D0028C5D7 /* PlayVC.swift */,
+				F66089F41EAA6E120028C5D7 /* TrainingVC.swift */,
 			);
 			path = Plants;
+			sourceTree = "<group>";
+		};
+		F66089F61EAA6F430028C5D7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F66089F71EAA6F4C0028C5D7 /* Nisäkkäät.jpeg */,
+				F66089F91EAA6F510028C5D7 /* Linnut.jpeg */,
+				F66089FB1EAA6F550028C5D7 /* Sammalet ja jäkälät.jpeg */,
+				F66089FD1EAA6F580028C5D7 /* Kasvit.jpeg */,
+				F66089FF1EAA6F5E0028C5D7 /* Sienet.jpeg */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +167,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66089FC1EAA6F550028C5D7 /* Sammalet ja jäkälät.jpeg in Resources */,
+				F66089F81EAA6F4C0028C5D7 /* Nisäkkäät.jpeg in Resources */,
 				F66089EB1EAA68270028C5D7 /* LaunchScreen.storyboard in Resources */,
+				F66089FE1EAA6F580028C5D7 /* Kasvit.jpeg in Resources */,
+				F66089FA1EAA6F510028C5D7 /* Linnut.jpeg in Resources */,
 				F66089E81EAA68270028C5D7 /* Assets.xcassets in Resources */,
 				F66089E61EAA68270028C5D7 /* Main.storyboard in Resources */,
+				F6608A001EAA6F5E0028C5D7 /* Sienet.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F66089E31EAA68270028C5D7 /* ViewController.swift in Sources */,
+				F66089F51EAA6E120028C5D7 /* TrainingVC.swift in Sources */,
+				F66089E31EAA68270028C5D7 /* MainVC.swift in Sources */,
+				F6154E021EACA76500F8F410 /* FancyView.swift in Sources */,
+				F6608A021EAA7E0D0028C5D7 /* PlayVC.swift in Sources */,
 				F66089E11EAA68270028C5D7 /* AppDelegate.swift in Sources */,
+				F66089F31EAA6BE20028C5D7 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +352,7 @@
 				F66089F11EAA68270028C5D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
