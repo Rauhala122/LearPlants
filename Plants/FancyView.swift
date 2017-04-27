@@ -11,6 +11,7 @@ import UIKit
 class FancyView: UIView {
 
     override func awakeFromNib() {
-        self.layer.cornerRadius = 3.0
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 2
     }
 }

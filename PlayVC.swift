@@ -9,11 +9,11 @@
 import UIKit
 
 class PlayVC: UIViewController {
+    
     @IBOutlet weak var option1Btn: UIButton!
     @IBOutlet weak var option2Btn: UIButton!
     @IBOutlet weak var option3Btn: UIButton!
     @IBOutlet weak var infoDetail: UILabel!
-    @IBOutlet weak var infoTitle: UILabel!
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var pointsLbl: UILabel!
     @IBOutlet weak var btn4: UIButton!
@@ -26,7 +26,9 @@ class PlayVC: UIViewController {
     var images = [UIImage]()
     var answers = [String]()
     
-    var seconds = 0
+    var images2 = [UIImage]()
+    
+    var seconds = 200
     var timer = Timer()
     
     var playList = [Int]()
@@ -44,28 +46,30 @@ class PlayVC: UIViewController {
     var points = 0
     
     var isTimerPaused = false
-    
-    var rightAnswers = 0
+
     var wrongAnswers = 0
+    
+    var totalSeconds = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       pointsLbl.text = "Points: 0"
+        print("View loaded")
+        
+        infoDetail.text = ""
         if category == "Sammalet ja jäkälät" {
         
         images = [#imageLiteral(resourceName: "kerrossammal"), #imageLiteral(resourceName: "harmaaporonjäkälä"), #imageLiteral(resourceName: "palleroporonjäkälä"), #imageLiteral(resourceName: "karhunsammal"), #imageLiteral(resourceName: "kynsisammal"), #imageLiteral(resourceName: "rahkasammal"), #imageLiteral(resourceName: "seinäsammal"), #imageLiteral(resourceName: "hirvenjäkälä"), #imageLiteral(resourceName: "torvijäkälä")]
+        images2 = [#imageLiteral(resourceName: "kerrossammal2"), #imageLiteral(resourceName: "harmaaporonjäkälä2"), #imageLiteral(resourceName: "palleroporonjäkälä2"), #imageLiteral(resourceName: "karhunsammal2"), #imageLiteral(resourceName: "kynsisamal2"), #imageLiteral(resourceName: "rahkasammal2"), #imageLiteral(resourceName: "seinäsammal2"), #imageLiteral(resourceName: "hirvenjäkälä2"), #imageLiteral(resourceName: "torvijäkälä2")]
+            
         answers = ["kerrossammal", "harmaaporonjäkälä", "palleroporonjäkälä", "karhunsammal", "kynsisammal", "rahkasammal", "seinäsammal", "hirvenjäkälä", "torvijäkälä"]
-        
-            seconds = 100
         
         } else if category == "Kasvit" {
             
             images = [#imageLiteral(resourceName: "vaahtera"), #imageLiteral(resourceName: "tammi"), #imageLiteral(resourceName: "metsalehmus"), #imageLiteral(resourceName: "pihlaja"), #imageLiteral(resourceName: "kuusi"), #imageLiteral(resourceName: "mänty"), #imageLiteral(resourceName: "hieskoivu"), #imageLiteral(resourceName: "rauduskoivu"), #imageLiteral(resourceName: "tervaleppä"), #imageLiteral(resourceName: "harmaaleppä"), #imageLiteral(resourceName: "haapa"), #imageLiteral(resourceName: "tuomi"), #imageLiteral(resourceName: "kataja"), #imageLiteral(resourceName: "pähkinäpensas"), #imageLiteral(resourceName: "puolukka"), #imageLiteral(resourceName: "mustikka"), #imageLiteral(resourceName: "kanerva"), #imageLiteral(resourceName: "variksenmarja"), #imageLiteral(resourceName: "riidenlieko"), #imageLiteral(resourceName: "sinivuokko"), #imageLiteral(resourceName: "valkovuokko"), #imageLiteral(resourceName: "kielo"), #imageLiteral(resourceName: "metsämansikka"), #imageLiteral(resourceName: "käenkaali"), #imageLiteral(resourceName: "metsätähti"), #imageLiteral(resourceName: "maitohorsma"), #imageLiteral(resourceName: "kultapiisku"), #imageLiteral(resourceName: "kangasmaitikka"), #imageLiteral(resourceName: "oravanmarja"), #imageLiteral(resourceName: "sudenmarja"), #imageLiteral(resourceName: "metsäkorte"), #imageLiteral(resourceName: "kallioimarre"), #imageLiteral(resourceName: "metsäimarre"), #imageLiteral(resourceName: "kotkansiipi"), #imageLiteral(resourceName: "sananjalka")]
             
             answers = ["vaahtera", "tammi", "metsälehmus", "pihlaja", "kuusi", "mänty", "hieskoivu", "rauduskoivu", "tervaleppä", "harmaaleppä", "Haapa", "tuomi", "kataja", "pähkinäpensas", "puolukka", "mustikka", "kanerva", "variksenmarja", "riidenlieko", "sinivuokko", "valkovuokko", "kielo", "metsämansikka", "käenkaali", "metsätähti", "maitohorsma", "kultapiisku", "kangasmaitikka", "oravanmarja", "sudenmarja", "metsäkorte", "kallioimarre", "metsäimarre", "kotkansiipi", "sananjalka" ]
-        seconds = 200
         
         }
         
@@ -94,10 +98,18 @@ class PlayVC: UIViewController {
     
     func generateRandom() {
         
+        let randomImage = Int(arc4random_uniform(1))
+        
+        print(randomImage)
             rightAnswer = answers[playList[index]]
             rightAnswerInt = playList[index]
             print("Index: " + String(playList[index]))
+        
+        if Int(randomImage) == 0 {
             image.image = images[playList[index]]
+        } else {
+            image.image = images2[playList[index]]
+        }
         
             var ranIndex = arc4random_uniform(3)
         
@@ -131,19 +143,48 @@ class PlayVC: UIViewController {
             btn3.setTitle(answers[joices[2]], for: .normal)
             btn4.setTitle(answers[joices[3]], for: .normal)
         
-    
         
+        
+            let alpha = 1
+            let red1: CGFloat = CGFloat(arc4random_uniform(200))
+            let green1: CGFloat = CGFloat(arc4random_uniform(200))
+            let blue1: CGFloat = CGFloat(arc4random_uniform(200))
+            let red2: CGFloat = CGFloat(arc4random_uniform(200))
+            let green2: CGFloat = CGFloat(arc4random_uniform(200))
+            let blue2: CGFloat = CGFloat(arc4random_uniform(200))
+        
+            let red3: CGFloat = CGFloat(arc4random_uniform(200))
+            let green3: CGFloat = CGFloat(arc4random_uniform(200))
+            let blue3: CGFloat = CGFloat(arc4random_uniform(200))
+        
+            let red4: CGFloat = CGFloat(arc4random_uniform(200))
+            let green4: CGFloat = CGFloat(arc4random_uniform(200))
+            let blue4: CGFloat  = CGFloat(arc4random_uniform(200))
+        
+            btn1.backgroundColor = UIColor(red:
+                red1/255, green: green1/255, blue: blue1/255, alpha: 1)
+            btn2.backgroundColor = UIColor(red: red2/255, green: green2/255, blue: blue2/255, alpha: 1)
+            btn3.backgroundColor = UIColor(red: red3/255, green: green3/255, blue: blue3/255, alpha: 1)
+            btn4.backgroundColor = UIColor(red: red4/255, green: green4/255, blue: blue4/255, alpha: 1)
+        
+        
+        
+    
     }
     
     func startPlay() {
-        
+        normalButtons()
+        index = 0
+        enableButtons()
         infoView.isHidden = true
         
         count = answers.count
         joices = []
         playList = []
         
-        
+        seconds = 201
+        points = 0
+        pointsLbl.text = "Points: \(points)"
         
         var x = 0
         
@@ -174,18 +215,11 @@ class PlayVC: UIViewController {
         
         if joices[0] == rightAnswerInt {
             if index + 1 == count {
+                endPlay()
                 timer.invalidate()
+                print("\(totalSeconds)")
             } else {
-                rightAnswers += 1
-                points += 1
-                pointsLbl.text = "Points: \(points)"
-                joices = []
-                index += 1
-                generateRandom()
-                btn1.setTitleColor(.blue, for: .normal)
-                btn2.setTitleColor(.blue, for: .normal)
-                btn3.setTitleColor(.blue, for: .normal)
-                btn4.setTitleColor(.blue, for: .normal)
+               rightAnswerFun()
             }
             
         } else {
@@ -199,19 +233,11 @@ class PlayVC: UIViewController {
     @IBAction func btn2Pressed(_ sender: UIButton) {
         if joices[1] == rightAnswerInt {
             if index + 1 == count {
+                endPlay()
                 timer.invalidate()
+                print("\(totalSeconds)")
             } else {
-                rightAnswers += 1
-                points += 1
-                pointsLbl.text = "Points: \(points)"
-            joices = []
-            index += 1
-            generateRandom()
-             
-                btn1.setTitleColor(.blue, for: .normal)
-                btn2.setTitleColor(.blue, for: .normal)
-                btn3.setTitleColor(.blue, for: .normal)
-                btn4.setTitleColor(.blue, for: .normal)
+                rightAnswerFun()
             }
             
         } else {
@@ -226,18 +252,11 @@ class PlayVC: UIViewController {
     @IBAction func btn3Pressed(_ sender: UIButton) {
         if joices[2] == rightAnswerInt {
             if index + 1 == count {
+                endPlay()
                 timer.invalidate()
+                print("\(totalSeconds)")
             } else {
-                rightAnswers += 1
-                points += 1
-                pointsLbl.text = "Points: \(points)"
-                joices = []
-                index += 1
-                generateRandom()
-                btn1.setTitleColor(.blue, for: .normal)
-                btn2.setTitleColor(.blue, for: .normal)
-                btn3.setTitleColor(.blue, for: .normal)
-                btn4.setTitleColor(.blue, for: .normal)
+             rightAnswerFun()
             }
             
         } else {
@@ -250,20 +269,11 @@ class PlayVC: UIViewController {
         if joices[3] == rightAnswerInt {
             if index + 1 == count {
                 timer.invalidate()
-                
-                
+                endPlay()
+                print("\(totalSeconds)")
                 
             } else {
-                rightAnswers += 1
-                points += 1
-                pointsLbl.text = "Points: \(points)"
-                joices = []
-                index += 1
-                generateRandom()
-                btn1.setTitleColor(.blue, for: .normal)
-                btn2.setTitleColor(.blue, for: .normal)
-                btn3.setTitleColor(.blue, for: .normal)
-                btn4.setTitleColor(.blue, for: .normal)
+                rightAnswerFun()
             }
             
         } else {
@@ -276,60 +286,34 @@ class PlayVC: UIViewController {
         isTimerPaused = true
         timer.invalidate()
         
+        option2Btn.isHidden = false
         
+        unEnableButton()
+        infoView.isHidden = false
         
-        btn1.isEnabled = false
-        btn2.isEnabled = false
-        btn3.isEnabled = false
-        btn4.isEnabled = false
+        infoDetail.text = "Game Paused"
         
-        UIView.animate(withDuration: 0.3, animations: {
-        
-            self.infoView.isHidden = false
-            
-        })
-        
-        infoView.backgroundColor = .lightGray
-        infoTitle.text = "Pause"
-        infoDetail.text = "Click 'resume' to continue training"
-        
-        option1Btn.setTitle("Quit", for: .normal)
-        
-        option2Btn.setTitle("Resume", for: .normal)
-        
-        option3Btn.setTitle("Restart", for: .normal)
+    
     }
    
     @IBAction func option1Pressed(_ sender: Any) {
-        
-        if option1Btn.titleLabel?.text == "Quit" {
-            
-            self.performSegue(withIdentifier: "goHome", sender: category)
-            
-        }
-        
+        print("Option1 pressed")
+        self.performSegue(withIdentifier: "goHome", sender: category)
+
     }
 
     
     @IBAction func option2Pressed(_ sender: Any) {
-        
-        if option2Btn.titleLabel?.text == "Resume" {
             
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(PlayVC.updateTimer), userInfo: nil, repeats: true)
-            
-            btn1.isEnabled = true
-            btn2.isEnabled = true
-            btn3.isEnabled = true
-            btn4.isEnabled = true
-            infoView.isHidden = true
-            
-            timer.fire()
-            
-        }
+            enableButtons()
+
         
     }
     
     @IBAction func option3Pressed(_ sender: Any) {
+        
+        startPlay()
     }
     
     
@@ -340,5 +324,42 @@ class PlayVC: UIViewController {
             }
         }
     }
-
+    
+    func rightAnswerFun() {
+        points += 1
+        pointsLbl.text = "Points: \(points)"
+        joices = []
+        index += 1
+        normalButtons()
+        generateRandom()
+    }
+    
+    func endPlay() {
+        infoView.isHidden = false
+        option2Btn.isHidden = true
+        unEnableButton()
+        totalSeconds = 200 - seconds
+        
+    }
+    
+    func enableButtons() {
+        btn1.isEnabled = true
+        btn2.isEnabled = true
+        btn3.isEnabled = true
+        btn4.isEnabled = true
+        infoView.isHidden = true
+    }
+    func unEnableButton() {
+        btn1.isEnabled = false
+        btn2.isEnabled = false
+        btn3.isEnabled = false
+        btn4.isEnabled = false
+    }
+    
+    func normalButtons() {
+        btn1.setTitleColor(.black, for: .normal)
+        btn2.setTitleColor(.black, for: .normal)
+        btn3.setTitleColor(.black, for: .normal)
+        btn4.setTitleColor(.black, for: .normal)
+    }
 }

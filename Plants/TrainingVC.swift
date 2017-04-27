@@ -17,7 +17,6 @@ class TrainingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         categoryField.title = category
 
     }
@@ -26,7 +25,7 @@ class TrainingVC: UIViewController {
     @IBAction func backPressed(_ sender: Any) {
         
         performSegue(withIdentifier: "goMain", sender: self)
-        
+
     }
 
     @IBAction func startPressed(_ sender: Any) {

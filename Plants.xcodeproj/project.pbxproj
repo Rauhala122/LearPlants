@@ -21,6 +21,7 @@
 		F66089FE1EAA6F580028C5D7 /* Kasvit.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F66089FD1EAA6F580028C5D7 /* Kasvit.jpeg */; };
 		F6608A001EAA6F5E0028C5D7 /* Sienet.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F66089FF1EAA6F5E0028C5D7 /* Sienet.jpeg */; };
 		F6608A021EAA7E0D0028C5D7 /* PlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6608A011EAA7E0D0028C5D7 /* PlayVC.swift */; };
+		F6ABCCE11EB1109D00AE1AD8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABCCE01EB1109C00AE1AD8 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F66089FD1EAA6F580028C5D7 /* Kasvit.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kasvit.jpeg; sourceTree = "<group>"; };
 		F66089FF1EAA6F5E0028C5D7 /* Sienet.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sienet.jpeg; sourceTree = "<group>"; };
 		F6608A011EAA7E0D0028C5D7 /* PlayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayVC.swift; path = ../PlayVC.swift; sourceTree = "<group>"; };
+		F6ABCCE01EB1109C00AE1AD8 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F6154E011EACA76500F8F410 /* FancyView.swift */,
+				F6ABCCE01EB1109C00AE1AD8 /* RoundedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -84,10 +87,10 @@
 				F66089F61EAA6F430028C5D7 /* Util */,
 				F66089E01EAA68270028C5D7 /* AppDelegate.swift */,
 				F66089E21EAA68270028C5D7 /* MainVC.swift */,
-				F66089F21EAA6BE20028C5D7 /* CategoryCell.swift */,
 				F66089E41EAA68270028C5D7 /* Main.storyboard */,
-				F66089E71EAA68270028C5D7 /* Assets.xcassets */,
+				F66089F21EAA6BE20028C5D7 /* CategoryCell.swift */,
 				F66089E91EAA68270028C5D7 /* LaunchScreen.storyboard */,
+				F66089E71EAA68270028C5D7 /* Assets.xcassets */,
 				F66089EC1EAA68270028C5D7 /* Info.plist */,
 				F6608A011EAA7E0D0028C5D7 /* PlayVC.swift */,
 				F66089F41EAA6E120028C5D7 /* TrainingVC.swift */,
@@ -189,6 +192,7 @@
 				F66089E31EAA68270028C5D7 /* MainVC.swift in Sources */,
 				F6154E021EACA76500F8F410 /* FancyView.swift in Sources */,
 				F6608A021EAA7E0D0028C5D7 /* PlayVC.swift in Sources */,
+				F6ABCCE11EB1109D00AE1AD8 /* RoundedButton.swift in Sources */,
 				F66089E11EAA68270028C5D7 /* AppDelegate.swift in Sources */,
 				F66089F31EAA6BE20028C5D7 /* CategoryCell.swift in Sources */,
 			);
